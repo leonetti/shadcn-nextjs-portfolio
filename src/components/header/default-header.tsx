@@ -6,13 +6,13 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
   navigationMenuTriggerStyle,
 } from '@/components/ui/navigation-menu';
+
+import ThemeToggle from '@/components/theme/theme-toggle';
 
 import siteConfig from '@/config/site';
 
@@ -45,7 +45,10 @@ const Header = () => {
       <SiteLogo />
       <NavigationMenu>
         <NavigationMenuList>
-          {siteConfig.navItems.map((item, index) => (
+          <NavigationMenuItem>
+            <ThemeToggle />
+          </NavigationMenuItem>
+          {/* {siteConfig.navItems.map((item, index) => (
             <NavigationMenuItem key={`${item.href}-${index}`}>
               <Link href={item.href} legacyBehavior passHref>
                 <NavigationMenuLink
@@ -55,7 +58,7 @@ const Header = () => {
                 </NavigationMenuLink>
               </Link>
             </NavigationMenuItem>
-          ))}
+          ))} */}
         </NavigationMenuList>
       </NavigationMenu>
     </header>

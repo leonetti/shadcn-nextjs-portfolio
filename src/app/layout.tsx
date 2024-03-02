@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import Header from '@/components/header/basic-header';
+import Header from '@/components/header/default-header';
+import { ThemeProvider } from '@/context/theme-context';
 import './globals.css';
 
 const inter = Poppins({
@@ -19,10 +20,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body className={inter.className}>
-        <Header />
-        {children}
+        <ThemeProvider
+          attribute="class"
+          defaultTheme="system"
+          enableSystem
+        >
+          <Header />
+          {children}
+        </ThemeProvider>
       </body>
     </html>
   );
