@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import Header from '@/components/navigation/basic-header';
+import Header from '@/components/header/basic-header';
 import './globals.css';
 
 const inter = Poppins({
