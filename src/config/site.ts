@@ -1,4 +1,10 @@
 export type SiteConfig = typeof siteConfig;
+import {
+  HomeIcon,
+  PersonIcon,
+  BackpackIcon,
+  EnvelopeOpenIcon,
+} from '@radix-ui/react-icons';
 
 export const siteConfig = {
   title: 'Hello World',
@@ -9,10 +15,22 @@ export const siteConfig = {
     {
       label: 'Home',
       href: '/',
+      icon: HomeIcon,
     },
     {
       label: 'About',
       href: '/about',
+      icon: PersonIcon,
+    },
+    {
+      label: 'Projects',
+      href: '/projects',
+      icon: BackpackIcon,
+    },
+    {
+      label: 'Contact',
+      href: '/contact',
+      icon: EnvelopeOpenIcon,
     },
   ],
   navMenuItems: [

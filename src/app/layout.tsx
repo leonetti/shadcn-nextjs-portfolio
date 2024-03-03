@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 import { Poppins } from 'next/font/google';
-import Header from '@/components/header/default-header';
 import { ThemeProvider } from '@/context/theme-context';
+import TailwindIndicator from '@/components/theme/tailwind-indicator';
 import './globals.css';
 
 const inter = Poppins({
@@ -27,9 +27,9 @@ export default function RootLayout({
           defaultTheme="system"
           enableSystem
         >
-          <Header />
           {children}
         </ThemeProvider>
+        <TailwindIndicator />
       </body>
     </html>
   );

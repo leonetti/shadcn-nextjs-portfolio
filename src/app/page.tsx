@@ -1,24 +1,17 @@
-import { Button } from '@/components/ui/button';
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from '@/components/ui/tooltip';
+import MainNavigation from '@/components/navigation/main-navigation';
 
 export default function Home() {
   return (
-    <main className="flex justify-center items-center min-h-screen">
-      <TooltipProvider>
-        <Tooltip delayDuration={0}>
-          <TooltipTrigger asChild>
-            <Button variant="outline">Hello</Button>
-          </TooltipTrigger>
-          <TooltipContent side="bottom">
-            <p>World</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
+    <main className="w-full h-screen flex flex-row relative">
+      <MainNavigation />
+      <section className="flex flex-col p-10 ml-20 w-full gap-5">
+        <h1 className="text-4xl text-neutral-200">Dashboard</h1>
+        <div className="w-full h-80 border border-neutral-500/50 bg-neutral-800/20 rounded" />
+        <div className="flex flex-row gap-5 w-full">
+          <div className="border-neutral-500/50 h-60 w-1/2 bg-neutral-800/20 rounded border" />
+          <div className="border-neutral-500/50 h-60 w-1/2 bg-neutral-800/20 rounded border" />
+        </div>
+      </section>
     </main>
   );
 }
