@@ -73,7 +73,7 @@ const MainNavigation = () => {
       <div className="flex flex-row w-full justify-between place-items-center">
         <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-700 rounded-full" />
         <Button
-          className="p-1 rounded-full flex bg-transparent hover:bg-transparent focus-visible:outline-neutral-400"
+          className="p-1 rounded-full flex bg-transparent hover:bg-transparent"
           onClick={() => handleOpenClose()}
         >
           <svg
