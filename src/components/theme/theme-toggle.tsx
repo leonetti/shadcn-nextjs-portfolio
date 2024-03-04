@@ -56,7 +56,7 @@ const ThemeToggle = () => {
 
         <Button
           type="submit"
-          className="text-neutral-400 flex gap-3 items-start justify-stretch text-md p-1  w-full hover:text-neutral-200 hover:bg-neutral-700/30 bg-transparent h-auto items-center"
+          className="text-neutral-400 flex gap-3 justify-stretch text-md p-1  w-full hover:text-neutral-200 hover:bg-neutral-700/30 bg-transparent h-auto items-center"
         >
           <div>
             <SunIcon className="min-w-8 w-8 min-h-8 h-8 dark:hidden" />

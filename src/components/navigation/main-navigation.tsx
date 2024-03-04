@@ -7,6 +7,13 @@ import { NavigationMenu } from '@/components/ui/navigation-menu';
 import NavigationLink from '@/components/navigation/navigation-link';
 import siteConfig from '@/config/site';
 import ThemeToggle from '@/components/theme/theme-toggle';
+import {
+  Avatar,
+  AvatarImage,
+  AvatarFallback,
+} from '@/components/ui/avatar';
+import avatar from '@image/avatar.webp';
+import Image from 'next/image';
 
 const containerVariants = {
   close: {
@@ -71,7 +78,17 @@ const MainNavigation = () => {
       className="bg-neutral-900 text-md flex flex-col z-10 gap-20 p-5 absolute top-0 left-0 h-full shadow shadow-neutral-600"
     >
       <div className="flex flex-row w-full justify-between place-items-center">
-        <div className="w-10 h-10 bg-gradient-to-br from-orange-500 to-amber-700 rounded-full" />
+        <Avatar className="w-10 h-10 rounded-full flex-shrink">
+          <AvatarImage src={avatar.src} asChild>
+            <Image
+              src={avatar}
+              className="object-cover w-10 h-10"
+              alt="avatar"
+              draggable={false}
+            />
+          </AvatarImage>
+          <AvatarFallback>AL</AvatarFallback>
+        </Avatar>
         <Button
           className="p-1 rounded-full flex bg-transparent hover:bg-transparent"
           onClick={() => handleOpenClose()}
