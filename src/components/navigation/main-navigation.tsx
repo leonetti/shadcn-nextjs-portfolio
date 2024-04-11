@@ -120,6 +120,7 @@ const MainNavigation = () => {
             label={item.label}
             icon={item.icon}
             key={`${item.href}-${index}`}
+            closeNavigationMenu={() => setIsOpen(false)}
           />
         ))}
       </NavigationMenu>
